@@ -20,4 +20,5 @@ namespace SportsStore.Models {
             Program.BuildWebHost(args).Services
                 .GetRequiredService<ApplicationDbContext>();
     }
+    
 }

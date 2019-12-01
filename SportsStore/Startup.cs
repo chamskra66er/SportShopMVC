@@ -27,7 +27,11 @@ namespace SportsStore {
 
             services.AddDbContext<AppIdentityDbContext>(options =>
                 options.UseSqlServer(
-                    Configuration["Data:SportStoreIdentity:ConnectionString"]));
+                    Configuration["Data:SportStoreIdentity:ConnectionString"]));        
+
+            services.AddDbContext<AppLoyaltyDbContext>(options =>
+                options.UseSqlServer(
+                    Configuration["Data:SportStoreLoyalty:ConnectionString"]));
 
             services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<AppIdentityDbContext>()
@@ -82,9 +86,7 @@ namespace SportsStore {
 
                 routes.MapRoute(name: null, template: "{controller}/{action}/{id?}");
             });
-            
-            //SeedData.EnsurePopulated(app);
-            //IdentitySeedData.EnsurePopulated(app);
+                      
         }
     }
 }

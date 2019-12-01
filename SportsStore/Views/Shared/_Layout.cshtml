@@ -13,6 +13,11 @@
     <div class="navbar navbar-inverse bg-inverse" role="navigation">
         <div class="row">
             <a class="col navbar-brand" href="#">SPORT SHOP</a>
+
+            <div class="navbar-inverse bg-inverse">              
+                <partial name="_LoginPartial" />
+            </div>
+
             <div class="col-4 text-right">
                 @await Component.InvokeAsync("CartSummary")
             </div>
