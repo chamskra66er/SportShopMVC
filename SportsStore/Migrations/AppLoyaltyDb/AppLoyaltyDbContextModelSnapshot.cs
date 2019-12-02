@@ -25,6 +25,8 @@ namespace SportsStore.Migrations.AppLoyaltyDb
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<decimal>("Bonus");
+
                     b.Property<string>("CardId");
 
                     b.Property<string>("FirstName")

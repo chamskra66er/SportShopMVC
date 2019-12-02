@@ -16,5 +16,6 @@ namespace SportsStore.Models
         [Required(ErrorMessage = "Пожалуйста, введите номер телефона")]
         public string Telephone { get; set; }
         public string CardId { get; set; }
+        public decimal Bonus { get; set; }
     }
 }

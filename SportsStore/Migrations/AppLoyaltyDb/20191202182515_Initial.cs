@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace SportsStore.Migrations.AppLoyaltyDb
 {
-    public partial class Patron : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,6 +15,7 @@ namespace SportsStore.Migrations.AppLoyaltyDb
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Bonus = table.Column<decimal>(type: "decimal(18, 2)", nullable: false),
                     CardId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),

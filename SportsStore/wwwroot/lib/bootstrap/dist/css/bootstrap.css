@@ -3934,6 +3934,16 @@ tbody.collapse.show {
   line-height: inherit;
   white-space: nowrap;
 }
+.newItem {
+    display: inline-block;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    margin-left: 50px;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
 
 .navbar-brand:focus, .navbar-brand:hover {
   text-decoration: none;

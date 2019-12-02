@@ -12,10 +12,12 @@
 <body>
     <div class="navbar navbar-inverse bg-inverse" role="navigation">
         <div class="row">
-            <a class="col navbar-brand" href="#">SPORT SHOP</a>
+            <a class="col navbar-brand" href="#">SPORT SHOP</a>@*add link to HomeController asp-for*@
+            <a class="col navbar-brand newItem" href="/Login">Login</a>
 
-            <div class="navbar-inverse bg-inverse">              
-                <partial name="_LoginPartial" />
+            <div class="col-5 text-right">
+                <p>Login</p>
+                @*<partial name="_LoginPartial" />*@
             </div>
 
             <div class="col-4 text-right">

@@ -11,8 +11,8 @@ using System;
 namespace SportsStore.Migrations.AppLoyaltyDb
 {
     [DbContext(typeof(AppLoyaltyDbContext))]
-    [Migration("20191201123411_Patron")]
-    partial class Patron
+    [Migration("20191202182515_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -25,6 +25,8 @@ namespace SportsStore.Migrations.AppLoyaltyDb
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<decimal>("Bonus");
 
                     b.Property<string>("CardId");
 
