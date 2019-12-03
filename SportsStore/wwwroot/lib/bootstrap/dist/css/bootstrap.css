@@ -3934,11 +3934,11 @@ tbody.collapse.show {
   line-height: inherit;
   white-space: nowrap;
 }
-.newItem {
+.navbar-brand newItem {
     display: inline-block;
     padding-top: .25rem;
     padding-bottom: .25rem;
-    margin-left: 50px;
+    margin-left: 20px;
     font-size: 1.25rem;
     line-height: inherit;
     white-space: nowrap;

@@ -1,0 +1,24 @@
+﻿@model Patron
+@{
+    ViewBag.Title = "Регистрация";
+    Layout = "_AdminLayout";
+}
+<div class="text-danger" asp-validation-summary="All"></div>
+<form asp-action="Index" asp-controller="Patron" method="post">
+    <div class="form-group">
+        <label asp-for="FirstName">Имя</label>
+        <div><span asp-validation-for="FirstName" class="text-danger"></span></div>
+        <input asp-for="FirstName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="LastName">Фамилия</label>
+        <div><span asp-validation-for="LastName" class="text-danger"></span></div>
+        <input asp-for="LastName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Telephone">Номер телефона</label>
+        <div><span asp-validation-for="Telephone" class="text-danger"></span></div>
+        <input asp-for="Telephone" class="form-control" />
+    </div>
+    <button class="btn btn-primary" type="submit">Зарегистрироваться</button>
+</form>

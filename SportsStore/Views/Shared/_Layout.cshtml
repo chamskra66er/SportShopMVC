@@ -13,12 +13,7 @@
     <div class="navbar navbar-inverse bg-inverse" role="navigation">
         <div class="row">
             <a class="col navbar-brand" href="#">SPORT SHOP</a>@*add link to HomeController asp-for*@
-            <a class="col navbar-brand newItem" href="/Login">Login</a>
-
-            <div class="col-5 text-right">
-                <p>Login</p>
-                @*<partial name="_LoginPartial" />*@
-            </div>
+            <a class="col navbar-brand newItem" asp-controller="Patron" asp-action="Index">Login</a>
 
             <div class="col-4 text-right">
                 @await Component.InvokeAsync("CartSummary")
