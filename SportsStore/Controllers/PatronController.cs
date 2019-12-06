@@ -18,5 +18,22 @@ namespace SportsStore.Controllers
         {
             return View("Index");
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Index(
+            [Bind("Id, FirstName, LastName,Telephone,CardId")] Patron patron)
+        {
+            if(ModelState.IsValid)
+            {
+                _context.Add(patron);
+                await _context.SaveChangesAsync();
+                return RedirectToRoute(new
+                {
+                    Controller="Product",
+                    Action="List"
+                });
+            }
+            return View(patron);
+        }
     }
 }
